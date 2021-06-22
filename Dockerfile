@@ -19,5 +19,6 @@ RUN buildDeps="libpq-dev libzip-dev libicu-dev libpng-dev libjpeg-dev libfreetyp
         sockets \
         xsl \
         sysvsem \
+        bcmath \
         intl
 CMD ["php-fpm"]

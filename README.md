@@ -8,4 +8,4 @@ PHP7 with
  * sockets
  * intl
  * imagick
-
+ * bcmath
