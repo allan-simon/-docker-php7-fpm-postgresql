@@ -16,6 +16,7 @@ RUN buildDeps="libpq-dev libzip-dev libicu-dev libpng-dev libjpeg-dev libfreetyp
         pgsql \
         sockets \
         xsl \
+        imap \
         sysvsem \
         bcmath \
         intl  && \
