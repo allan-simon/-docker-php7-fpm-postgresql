@@ -1,4 +1,4 @@
-FROM php:8.1-fpm
+FROM php:8.2-fpm
 # Install modules
 RUN buildDeps="libpq-dev libzip-dev libicu-dev libpng-dev libjpeg-dev libfreetype6-dev libmagickwand-dev libxslt-dev wget unzip gnupg2" && \
     apt-get update && \
@@ -16,7 +16,6 @@ RUN buildDeps="libpq-dev libzip-dev libicu-dev libpng-dev libjpeg-dev libfreetyp
         pgsql \
         sockets \
         xsl \
-        imap \
         sysvsem \
         bcmath \
         intl  && \
@@ -26,7 +25,7 @@ RUN buildDeps="libpq-dev libzip-dev libicu-dev libpng-dev libjpeg-dev libfreetyp
     curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && \
-    apt-get install -y git unzip wget yarn && \
+    apt-get install -y git unzip wget yarn libfaketime && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*    
         
